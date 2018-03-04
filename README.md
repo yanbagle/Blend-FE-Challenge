@@ -1,5 +1,7 @@
 Hello!
 
+The app is on https://yanzhang000.github.io/Blend-FE-Challenge/
+
 To run this locally:
 1) cd to where package.json is
 2) npm install
