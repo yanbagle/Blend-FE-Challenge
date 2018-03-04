@@ -6,8 +6,9 @@ To run this locally:
 3) npm start
 4) go to http://localhost:4200/
 
-Application structure explained: 
+This was written in Angular 5
 
+Application structure explained: 
 In the home component, it contains both the header (where Add Note button lives) and the notes view comp (which 
 displays all of the user's notes created so far). The header component is a dumb component which only lets the notes 
 view component know that the user has chose to wanting to add a note. Then the notes view comp would then trigger 
