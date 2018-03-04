@@ -1,1 +1,4 @@
-<app-post-it-note></app-post-it-note>
+<div class="flex" *ngIf="container.notes">
+  <app-post-it-note *ngFor="let noteId of container.notes | keys">
+  </app-post-it-note>
+</div>

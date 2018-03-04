@@ -1,4 +1,6 @@
-class NoteContainer {
+import {Note} from './Note';
+
+export class NoteContainer {
 
   notes: {};
 

@@ -8,6 +8,7 @@ import { NotesViewComponent } from './home/notes-view/notes-view.component';
 import { HeaderComponent } from './home/header/header.component';
 import { PostItNoteComponent } from './modals/post-it-note/post-it-note.component';
 import { AddPostItNoteComponent } from './modals/add-post-it-note/add-post-it-note.component';
+import {KeysPipe} from './pipes/KeysPipe';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { AddPostItNoteComponent } from './modals/add-post-it-note/add-post-it-no
     HeaderComponent,
     PostItNoteComponent,
     AddPostItNoteComponent,
+    KeysPipe,
   ],
   imports: [
     BrowserModule

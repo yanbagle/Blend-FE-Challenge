@@ -1,4 +1,4 @@
-enum Color {
+export enum Color {
   RED = 1,
   GREEN,
   YELLOW,

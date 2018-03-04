@@ -1,4 +1,6 @@
-class Note {
+import {Color} from './Color';
+
+export class Note {
   title: string;
   notes: string;
   color: Color;
