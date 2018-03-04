@@ -4,7 +4,7 @@
   <div class="note-header flex space-between">
     <div class="title-text">{{note.title}}</div>
     <div class="icons fa-not-hover">
-      <i class="fa fa-edit"></i>
+      <i class="fa fa-edit" (click)="goToEdit(note.id)"></i>
       <i class="fa fa-trash" (click)="showConfirmation()"></i>
     </div>
   </div>

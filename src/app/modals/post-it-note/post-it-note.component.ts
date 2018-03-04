@@ -12,6 +12,7 @@ export class PostItNoteComponent implements OnInit {
   @Input() note: Note;
 
   @Output() deleteNoteEmitter: EventEmitter<any> = new EventEmitter();
+  @Output() editNoteEmitter: EventEmitter<any> = new EventEmitter();
 
   public showDeleteConfirm = false;
 
@@ -28,12 +29,17 @@ export class PostItNoteComponent implements OnInit {
     this.showDeleteConfirm = true;
   }
 
+  // emit note id back to notes-view comp to delete note
   public deleteNote(userSelect) {
     if (userSelect === 'delete') {
       this.deleteNoteEmitter.emit(this.note.id);
     } else {
       this.showDeleteConfirm = false;
     }
+  }
+
+  public goToEdit (noteId) {
+    this.editNoteEmitter.emit(noteId);
   }
 
 }
