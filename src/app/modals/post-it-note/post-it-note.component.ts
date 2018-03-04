@@ -9,6 +9,8 @@ import {Note} from '../../models/Note';
 })
 export class PostItNoteComponent implements OnInit {
 
+  // Post it note component that displays a user's note
+
   @Input() note: Note;
 
   @Output() deleteNoteEmitter: EventEmitter<any> = new EventEmitter();

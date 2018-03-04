@@ -7,6 +7,8 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 })
 export class ConfirmDeleteComponent implements OnInit {
 
+  // Delete Confirmation Modal
+
   @Output() userSelect: EventEmitter<any> = new EventEmitter();
 
   constructor() { }

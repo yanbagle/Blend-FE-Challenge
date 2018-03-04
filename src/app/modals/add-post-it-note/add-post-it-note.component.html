@@ -9,7 +9,7 @@
                [ngClass]="{ 'selected-border': colors[color] === selectedColor }" (click)="setSelectedColor(colors[color])"></div>
         </div>
         <div class="title-text">
-          <input type="text" [(ngModel)]="notesTitle" placeholder="Untitled" [value]="notesTitle">
+          <input type="text" [(ngModel)]="notesTitle" (ngModelChange)="notesOnChange()" placeholder="Untitled" [value]="notesTitle">
         </div>
         <div class="notes-text">
           <textarea [(ngModel)]="notes" (ngModelChange)="notesOnChange()" rows="35" cols="0" placeholder="Just start typing here">{{notes}}</textarea>
@@ -19,7 +19,7 @@
         <div class="flex space-between">
           <div class="button"><button class="cancel" (click)="cancel()">Cancel</button></div>
           <div class="button">
-            <button class="positive" (click)="addNote()">
+            <button [ngClass]="{'positive': enableSubmit, 'cancel': !enableSubmit}" [disabled]="!enableSubmit" (click)="addNote()">
               <span *ngIf="!editMode">Add</span>
               <span *ngIf="editMode">Edit</span>
             </button>

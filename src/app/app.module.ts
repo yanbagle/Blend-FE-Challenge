@@ -9,6 +9,8 @@ import { HeaderComponent } from './home/header/header.component';
 import { PostItNoteComponent } from './modals/post-it-note/post-it-note.component';
 import { AddPostItNoteComponent } from './modals/add-post-it-note/add-post-it-note.component';
 import {KeysPipe} from './pipes/KeysPipe';
+import { ConfirmDeleteComponent } from './modals/confirm-delete/confirm-delete.component';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -20,9 +22,11 @@ import {KeysPipe} from './pipes/KeysPipe';
     PostItNoteComponent,
     AddPostItNoteComponent,
     KeysPipe,
+    ConfirmDeleteComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

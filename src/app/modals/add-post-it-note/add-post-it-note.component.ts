@@ -16,6 +16,7 @@ export class AddPostItNoteComponent implements OnInit, OnChanges {
   public notesTitle;
   public selectedColor = Color.RED;
   public editMode = false;
+  public enableSubmit = false;
   public noteId; // if user is editing a note, this is the note id associated with it
 
   constructor() { }
@@ -24,8 +25,8 @@ export class AddPostItNoteComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges (changes: SimpleChanges) {
-    // if user selects to edit a note
     const note = changes['userSelectedNote'].currentValue;
+    // if user selects to edit a note, we should have received their selected note
     if (note) {
       this.notes = note.notes;
       this.notesTitle = note.title;
@@ -40,7 +41,7 @@ export class AddPostItNoteComponent implements OnInit, OnChanges {
   }
 
   public notesOnChange () {
-
+    this.enableSubmit = true;
   }
 
   public setSelectedColor (color) {
@@ -48,10 +49,11 @@ export class AddPostItNoteComponent implements OnInit, OnChanges {
   }
 
   public cancel () {
+    // TODO: standardize user actions object for emitting back to parent comps
     this.userAction.emit('cancel');
   }
 
-  // emits back up to notes-view comp to add or edit a note
+  // emits back up to notes-view comp to add or edit the note
   public addNote () {
     const note = new Note(this.notesTitle, this.notes, this.selectedColor);
     this.userAction.emit({id: this.noteId, note: note});

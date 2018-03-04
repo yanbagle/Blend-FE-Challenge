@@ -2,7 +2,8 @@ import {Note} from './Note';
 
 export class NoteContainer {
 
-  notes: {};
+  public notes: {};
+  private id = 0;
 
   constructor () {
     this.notes = {};
@@ -19,19 +20,15 @@ export class NoteContainer {
     }
   }
 
-  public editNote (noteId: string, title, notes, color) {
+  public editNote (noteId: string, note: Note) {
     if (this.notes[noteId]) {
-      this.notes[noteId].title = title;
-      this.notes[noteId].notes = notes;
-      this.notes[noteId].color = color;
+      note.id = noteId;
+      this.notes[noteId] = note;
     }
   }
 
   public setId (note: Note) {
-    let rand = Math.floor(Math.random() * Math.floor(1000)).toString();
-    while (this.notes[rand]) {
-      rand = Math.floor(Math.random() * Math.floor(1000)).toString();
-    }
-    note.id = rand;
+    note.id = this.id.toString();
+    this.id++;
   }
 }

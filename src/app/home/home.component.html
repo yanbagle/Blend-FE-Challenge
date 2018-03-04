@@ -1,4 +1,8 @@
 <main>
-  <app-header></app-header>
-  <app-notes-view></app-notes-view>
+  <app-header
+    (showAddNote)="showAddNoteModal()">
+  </app-header>
+  <app-notes-view
+    [showAddNote]="showAddNote"
+    (userAction)="handleUserAction($event)"></app-notes-view>
 </main>

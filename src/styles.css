@@ -7,16 +7,37 @@ body {
 
 .flex {
   display: flex; /* or inline-flex */
+  flex-wrap: wrap;
 }
 
 .flex-end {
   justify-content: flex-end;
 }
 
+.flex-no-wrap {
+  flex-wrap: nowrap;
+}
+
 .space-between {
   justify-content: space-between;
 }
 
-.fa-not-hover {
-  opacity: 0.3;
+button {
+  border: none;
+  color: white;
+  padding: 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2rem 4rem;
+  border-radius: 12px;
+}
+
+.positive {
+  background-color: LightSeaGreen;
+}
+
+.cancel {
+  background-color: lightgrey;
 }

@@ -1,27 +1,24 @@
-# Blend
+Hello!
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.2.
+To run this locally:
+1) cd to where package.json is
+2) npm install
+3) npm start
+4) go to http://localhost:4200/
 
-## Development server
+Application structure explained: 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+In the home component, it contains both the header (where Add Note button lives) and the notes view comp (which 
+displays all of the user's notes created so far). The header component is a dumb component which only lets the notes 
+view component know that the user has chose to wanting to add a note. Then the notes view comp would then trigger 
+to open the Add Note modal/comp. When the user opts to edit a note, the same Add Note comp would display but only in 
+edit mode. 
 
-## Code scaffolding
+The state is being persisted in the Notes Container object. If I had more time, I would implement an actual Redux store 
+for persisting the state as I anticipate the features would get more complicated. For now, the notes are being stored 
+in an object with the key value pair being the note id and the note object itself. This makes adding, deleting, and 
+editing a note a constant time operation. 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Thank you so much for your time! This was an interesting little exercise :)    
+  
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
