@@ -27,11 +27,17 @@
 }
 
 .text-box {
-  height: 12.5rem;
+  height: 10.5rem;
   width: inherit;
   background-color: transparent;
   font-size: 0.8rem;
   color: darkgrey;
   margin-top: 1.3rem;
   margin-left: 1rem;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.line-breaker {
+  white-space: pre-line;
 }
