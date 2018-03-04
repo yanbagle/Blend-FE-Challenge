@@ -1,14 +1,16 @@
-<!-- Showing all the notes that user has created -->
-<div class="flex" *ngIf="container.notes">
-  <app-post-it-note *ngFor="let noteId of container.notes | keys"
-    [note]="container.notes[noteId]"
-    (deleteNoteEmitter)="deleteNote($event)"
-    (editNoteEmitter)="editNote($event)">
-  </app-post-it-note>
-</div>
+<section>
+  <!-- Showing all the notes that user has created -->
+  <div class="flex" *ngIf="container.notes">
+    <app-post-it-note *ngFor="let noteId of container.notes | keys"
+      [note]="container.notes[noteId]"
+      (deleteNoteEmitter)="deleteNote($event)"
+      (editNoteEmitter)="editNote($event)">
+    </app-post-it-note>
+  </div>
 
-<!-- User opts for adding or editing a note -->
-<app-add-post-it-note *ngIf="showAddNote"
-  (userAction)="addNote($event)"
-  [userSelectedNote]="userSelectedNote">
-</app-add-post-it-note>
+  <!-- User opts for adding or editing a note -->
+  <app-add-post-it-note *ngIf="showAddNote"
+    (userAction)="addNote($event)"
+    [userSelectedNote]="userSelectedNote">
+  </app-add-post-it-note>
+</section>
