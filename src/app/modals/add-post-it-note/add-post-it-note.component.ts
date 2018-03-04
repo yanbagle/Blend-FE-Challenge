@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Color} from '../../models/Color';
 
 @Component({
   selector: 'app-add-post-it-note',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddPostItNoteComponent implements OnInit {
 
+  public colors = Color;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  public setColor () {
+    return { 'background-color': 'green' };
   }
 
 }

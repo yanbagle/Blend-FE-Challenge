@@ -14,7 +14,7 @@
 
 /* Modal Footer */
 .modal-footer {
-  height: 6.5rem;
+  height: 7rem;
   background-color: WhiteSmoke;
   color: white;
   border-radius: inherit;
@@ -24,11 +24,11 @@
 
 /* Modal Content */
 .modal-content {
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   background-color: #fefefe;
-  margin: 7rem auto;
+  margin: 5rem auto;
   padding: 0;
-  width: 35%;
+  width: 50%;
   animation-name: animatetop;
   animation-duration: 0.4s
 }
@@ -39,15 +39,41 @@
   to {top: 0; opacity: 1}
 }
 
-h1 {
-  padding-top: 2rem;
-  padding-left: 2rem;
-  font-size: 1.5rem;
+.note-color {
+  height: 0.7rem;
+  border-radius: inherit;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
-p {
-  padding: 1rem 0 4rem 2rem;
+.note-form {
+  margin-top: 1rem;
+  margin-left: 2rem;
 }
 
+.color-selection {
+  border-radius: 0.5rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.title-text input {
+  width: 89%;
+  line-height: 2rem;
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  color: darkslategrey;
+  border: none;
+  font-style: italic;
+}
+
+.notes-text textarea{
+  margin: 1rem 0 2rem 0;
+  border: none;
+  color: darkslategrey;
+  resize: none;
+  width: 95%;
+}
 
 
