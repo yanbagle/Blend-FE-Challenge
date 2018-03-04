@@ -10,8 +10,4 @@ class Note {
     this.color = color;
   }
 
-  public getId () {
-    return this.id;
-  }
-
 }

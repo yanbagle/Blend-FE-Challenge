@@ -1,0 +1,38 @@
+#note {
+  box-shadow: 0.2rem 0.2rem 0.1rem lightgrey;
+  width: 18rem;
+  height: 17rem;
+  margin: 2rem;
+}
+
+.note-color {
+  background-color: red;
+  height: 0.5rem;
+}
+
+.note-header {
+  height: 4rem;
+  width: inherit;
+  background-color: transparent;
+  border-bottom: 0.1rem solid lightgrey;
+}
+
+.title-text {
+  margin-top: 1.3rem;
+  margin-left: 1rem;
+}
+
+.icons {
+  margin-top: 1.3rem;
+  margin-right: 1rem;
+}
+
+.text-box {
+  height: 12.5rem;
+  width: inherit;
+  background-color: transparent;
+  font-size: 0.8rem;
+  color: darkgrey;
+  margin-top: 1.3rem;
+  margin-left: 1rem;
+}

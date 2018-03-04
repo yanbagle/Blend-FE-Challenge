@@ -1,4 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 body {
   font-family: Helvetica, Arial, Sans-Serif;
+  margin: 0;
+  color: dimgray;
+}
+
+.flex {
+  display: flex; /* or inline-flex */
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.fa-not-hover {
+  opacity: 0.3;
 }
